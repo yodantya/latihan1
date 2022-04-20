@@ -31,7 +31,7 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index'])->name('post.index');
 
 //halaman single post
 Route::get('/post/{post:slug}', [PostController::class, 'show']);
